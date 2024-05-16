@@ -4,7 +4,13 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("What would you like?");
+
+            var order = Console.ReadLine();
+
+            ISandwiches madeOrder = SandwichFactory.MakeSandwich(order);
+            madeOrder.SandwhichType();
+            
         }
     }
 }
